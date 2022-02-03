@@ -1,0 +1,204 @@
+Just before starting this project I learned to perform what is called a "riffle shuffle", which is one of the most popular ways to shuffle a deck of cards.
+To perform this shuffle the deck will be devided into two halves, one half for each hand. 
+These two halfes are then interleaved to create a shuffled deck. This is often done multiple times to have a better shuffled deck.
+
+The reason why I think this method is so effective is because almost no one performs it perfectly. 
+If it was always performed perfectly then it would always be possible to figure out what the order of the deck currently is.
+When someone doesn't perform it perfectly, like for example when the deck was not devided evenly, 
+then the deck would already start to resemble the perfectly shuffled deck less and less. 
+After a few imperfect shuffles the deck would be so distant from the perfectly shuffled deck that it would be impossible to guess it's order.   
+  
+
+Skill level thus obviously plays a big role and that raised some questions for me:  
+
+how much does a perfectly shuffled deck resemble a deck that was shuffled almost perfectly? 
+At what skill level does the deck start to lose it's resemblance to the perfectly shuffled deck?
+What would the graph from the worst to the best shuffler look like?
+What component of the skill of the player plays the most significant role?
+
+
+
+These are the questions that got me inspired to start this project and will be what this project revolves around.
+
+to answer these questions there needed to be a way of measuring the difference put in place. --------
+
+also a way to define it would mean for a player to perform the shuffle badly ------------
+
+
+
+
+
+INTRO
+^^^
+
+
+
+
+HOW THE PROGRAM FUNCTIONS
+
+The program compares each player against the perfect player to determine how different their deck is from the perfectly shuffled one.
+To do so, we must first define how players will be compared against one another.
+The program will be evaluating each player based on two different metrics: "Perfectly similar cards" and "Streak similar cards".
+Perfectly similar cards:	The amount of cards that are in the same exact position as the perfectly shuffled deck 
+Streak similar cards: 		The amount of cards that are in the same order as the perfectly shuffled deck.
+Each player will be evaluated based on these metrics, and their results will be plotted in a graph for easy viewing.
+
+<PICTURE SIMILARITY EXPLAIN>
+
+
+
+
+
+
+We also need to define the ways in which this shuffle allows for skill expression. 
+I believe that a player's skill can be expressed in two ways: how well a player divides the deck into two halves and how well a player stacks the two halves back together.
+
+DEVIDING
+The perfect player will always part the deck exactly in the middle, whereas the remainder of the players will most likely part it somewhere before or after that. 
+To accomplish this, the program will assign a range to each player.
+This range, which I'll refer to as the parting range, will consist of all the percentages of how that player parts the deck. 
+A player with a range of 40% to 60% will always split the deck with a percentage that is within that range, such as 42%, 51% or 59%.
+Because the perfect player always splits the deck perfectly down the middle, he or she will always split the deck at 50%.
+
+STACKING
+The second type of skill expression, which I'll refer to as the stacking chance, is a percentage that shows how well a player stacks the two halves back together.
+In an ideal world, the player stacks the cards from his or her left and right hands perfectly in a 1 to 1 ratio.
+A player with an 80% stacking chance has a 20% chance of messing up and not stacking the card from that hand.
+As a result, the left hand may stack three cards in a row before the right hand stacks a single card.
+Because the perfect player always stacks the cards flawlessly, he or she will always have a stacking chance of 100%.
+
+
+To test out a certain scenario you'd only have to fill in it's parameters to find the results. The way it is implemented also allows you to easily run many different scenario's in one go.
+Each scenario consists of the following paramaters:
+- Filename                	~The name of the file in which the scenario's graph will be saved.
+- Amount of players		~The amount of players for that scenario   
+- Amount of shuffles		~The amount of times each player shuffles their deck before finding it's score. 
+- Amount of repeats		~The number of times the scenario is performed to provide a more quantifiable outcome; the more repetitions, the fewer outliers in the final graph, and hence a more streamlined result.
+- Parting range minimum		~The lowest possible percentage at which the worst player can split the deck. The remaining players will have steadily increasing minimums until it hits 50%, at which point we will have reached the perfect player.
+- Parting range maximum		~The highest possible percentage at which the worst player can split the deck. The remaining players will have steadily decreasing maximums until it hits 50%, at which point we will have reached the perfect player. 
+- Stacking chance		~The percentage of how well the worst player stacks the cards. The remaining players will have steadily inceasing percentages until it hits 100%, at which point we will have reached the perfect player. 
+
+
+
+RESULTS AND FINDINGS
+
+answering the questions 
+
+
+
+
+
+----------GRAMMER THINGY RESULTS------- site: https://quillbot.com/
+#####HEADER
+A deck of cards can be shuffled in a variety of ways. A "riffle shuffle" is one such method. I became curious about how much of an impact the component of skill has while shuffling with this method.
+
+#####INTRO
+Just before beginning this project, I learnt how to perform a "riffle shuffle", which is a common way to shuffle a deck of cards.
+To perform this shuffle, divide the deck into two halves, one for each hand.
+The two halves are then interlaced to complete the shuffle. This shuffle may be repeated several times to achieve a better-shuffled deck.
+
+I feel that the main reason for this method's efficacy arises from the fact that almost no one performs it flawlessly.
+If it were always done flawlessly, we would be able to figure out what the current order of the deck is if we knew the initial order of the deck.
+This would be problematic in card games such as poker or blackjack, where knowing the order of the deck would provide an unfair advantage.
+Fortunately, this is not the case, but it made me question how much of an impact the component of skill has while performing this shuffle.
+
+This train of thought raised the questions that would lead to the start of this project. The following are these questions:
+- How closely does a perfectly shuffled deck resemble a deck that was shuffled almost perfectly?
+- At what skill level does the deck begin to lose its resemblance to a perfectly shuffled deck?
+- What would the graph look like if it went from the worst to the best shuffler?
+- What component of the shuffler's skill is the most important?
+
+To find answers to these questions, I decided to write a python program.
+
+
+#####THE PROGRAM
+The program compares each player against the perfect player to determine how different their deck is from the perfectly shuffled one.
+To do so, we must first define how players will be compared against one another.
+The program will be evaluating each player based on two different metrics: "Perfectly similar cards" and "Streak similar cards".
+
+<PICTURE SIMILARITY EXPLAIN>
+
+Perfectly similar cards:	The amount of cards that are in the same exact position as the perfectly shuffled deck 
+Streak similar cards: 		The amount of cards that are in the same order as the perfectly shuffled deck.
+Each player will be evaluated based on these metrics, and their results will be plotted in a graph for easy viewing.
+
+
+We also need to define the ways in which this shuffle allows for skill expression. 
+I believe that a player's skill can be expressed in two ways: how well a player divides the deck into two halves and how well a player stacks the two halves back together.
+
+DEVIDING
+The perfect player will always part the deck exactly in the middle, whereas the remainder of the players will most likely part it somewhere before or after that. 
+To accomplish this, the program will assign a range to each player.
+This range, which I'll refer to as the parting range, will consist of all the percentages of how that player parts the deck. 
+A player with a range of 40% to 60% will always split the deck with a percentage that is within that range, such as 42%, 51% or 59%.
+Because the perfect player always splits the deck perfectly down the middle, he or she will always split the deck at 50%.
+
+STACKING
+The second type of skill expression, which I'll refer to as the stacking chance, is a percentage that shows how well a player stacks the two halves back together.
+In an ideal world, the player stacks the cards from his or her left and right hands perfectly in a 1 to 1 ratio.
+A player with an 80% stacking chance has a 20% chance of messing up and not stacking the card from that hand.
+As a result, the left hand may stack three cards in a row before the right hand stacks a single card.
+The perfect player will always have a stacking chance of 100%.
+
+
+To test out a certain scenario you'd only have to fill in it's parameters to find the results. The way it is implemented also allows you to easily run many different scenario's in one go.
+Each scenario needs the following paramaters to run:
+- Filename                	~The name of the file in which the scenario's graph will be saved.
+- Amount of players		~The amount of players for that scenario   
+- Amount of shuffles		~The amount of times each player shuffles their deck before finding it's score. 
+- Amount of repeats		~The number of times the scenario is performed to provide a more quantifiable outcome; the more repetitions, the fewer outliers in the final graph, and hence a more streamlined result.
+- Parting range minimum		~The lowest possible percentage at which the worst player can split the deck. The remaining players will have steadily increasing minimums until it hits 50%, at which point we will have reached the perfect player.
+- Parting range maximum		~The highest possible percentage at which the worst player can split the deck. The remaining players will have steadily decreasing maximums until it hits 50%, at which point we will have reached the perfect player. 
+- Stacking chance		~The percentage of how well the worst player stacks the cards. The remaining players will have steadily increasing percentages until it hits 100%, at which point we will have reached the perfect player. 
+
+
+
+
+#####RESULTS
+
+--the main test
+The difference in skill level between the best and worst players is depicted in this first graph, with player 0 having the highest skill level and player 100 having the lowest.
+Player 100 has the widest possible parting range (0 to 100%) and the lowest stacking chance (1%).
+
+<PICTURE MAIN RESULTS>
+
+It's interesting to note that we've reached a sort of tipping point around player 50, after which a lower skill level seems to matter less and less as the graph progresses.
+This can be inferred from the graph, which begins to flatten out around player 50.
+
+
+When we shuffle two times instead of one, this fact emerges once more.
+
+<PICTURE MAIN RESULTS WITH 2 SHUFFLES>
+
+The difference is that the tipping point now occurs sooner, around player 30, rather than later, around player 50, as it did when we merely shuffled once.
+Another intriguing feature of this second graph is that the line of perfectly similar cards falls below the line of streak similar cards, which did not happen with just one shuffle.
+
+
+-- which aspect of the skill matters more.
+
+To determine which component of the player's skill has a greater impact, they will be examined independently. 
+
+<INSERT ONLY PARTING>
+
+The graph above depicts the scenario in which each player's only skill expression is how well he or she parts the deck. 
+This is accomplished by giving all players a 100% stacking chance in order to eliminate any other form of skill expression and only test for the skill of parting.
+
+
+<INSERT ONLY STACKING>
+
+The graph above depicts the scenario in which each player's only skill expression is how well he or she stacks the two halves back together.
+This is accomplished by giving all players a 50% parting range in order to eliminate any other form of skill expression and only test for the skill of stacking.
+
+
+The results of both graphs will be blended into one graph to provide a more visual side by side comparison.
+
+<GRAPH WITH BOTH>
+
+The answer to which of the two skill expressions has the greatest impact can be found quite easily in the graph above.
+The one with the greatest impact will have the lower line, because a lower line indicates that the decks grew more diverse as a result of that component of the skill.
+Using this logic, I argue that the skill of stacking is more important to the final deck than the skill of parting. 
+
+
+
+
+

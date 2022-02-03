@@ -1,0 +1,213 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Project: project1</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+
+					</header>
+
+				<!-- Nav -->
+				<!--
+				<nav id="nav">
+					<ul class="links">
+						<li><a href="index.html">Back to Projects</a></li>
+						<li><a href="#">See Code for this project</a></li>
+					</ul>
+				</nav>
+				-->
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Card Shuffle</h1>
+									<p>A deck of cards can be shuffled in a variety of ways. A "riffle shuffle" is one such method. I became curious about how much of an impact the component of skill has while shuffling with this method.</p>
+								</header>
+								<div class="image main"><img src="images/cardshuffle.jpg" alt="" /></div>
+								<h2>Introduction</h2>
+								<p>
+									Just before beginning this project, I learned how to perform a "riffle shuffle", which is a common way to shuffle a deck of cards.
+									To perform this shuffle, divide the deck into two halves, one for each hand.
+									The two halves are then interlaced to complete the shuffle. This shuffle may be repeated several times to achieve a better-shuffled deck.
+								</p>
+								<p>
+									I believe the main reason for this method's efficacy arises from the fact that almost no one performs it flawlessly.
+									If it were always done flawlessly, we would always be able to figure out what the current order of the deck looks like if we knew the initial order of the deck.
+									This would be problematic in card games such as poker or blackjack, where knowing the order of the deck would provide an unfair advantage.
+								</p>
+								<p>
+									This train of thought raised the questions that would lead to the start of this project. The following are these questions:
+									<ul>
+										<li>How closely does a perfectly shuffled deck resemble a deck that was shuffled almost perfectly?</li>
+										<li>At what skill level does the deck begin to lose its resemblance to a perfectly shuffled deck?</li>
+										<li>What would the graph look like if it went from the worst to the best shuffler?</li>
+										<li>What component of the shuffler's skill is the most important?
+									</ul>
+									To find answers to these questions, I decided to write a python program.
+								</p>
+								
+								<br>
+								<h2>How does this program work?</h2>
+								<p>
+									The program compares each player against the perfect player to determine how different their deck is from the perfectly shuffled one.
+									To do so, we must first define how players will be compared against one another.
+								</p>
+								<h3>Way of measuring</h3>
+								<p>
+									The program will be evaluating each player based on two different metrics: "Perfectly similar cards" and "Streak similar cards".
+									<div class="image main"><img src="images/SimularityExample.png" alt="" /></div>
+								
+									<dl>
+										<dt>Perfectly similar cards</dt>
+										<dd>
+											The amount of cards that are in the same exact position as the perfectly shuffled deck 
+										</dd>
+										<br>
+										<dt>Streak similar cards</dt>
+										<dd>
+											The amount of cards that are in the same order as the perfectly shuffled deck.
+										</dd>
+									</dl>
+								</p>
+
+								<br>
+								<p>
+									<h3>Skill expression</h3>
+									We also need to define the ways in which this shuffle allows for skill expression. 
+									I believe that a player's skill can be expressed in two ways: how well a player parts the deck into two halves and how well a player stacks the two halves back together.
+									<br><br>
+									<dl>
+										<dt>Parting</dt>
+										<dd>
+											The perfect player will always part the deck exactly in the middle, whereas the remainder of the players will most likely part it somewhere before or after that. 
+											To accomplish this, the program will assign a range to each player.
+											This range, which I'll refer to as the parting range, will consist of all the percentages of how that player could part the deck. 
+											A player with a range of 40% to 60% will always split the deck with a percentage that is within that range, such as 42%, 51% or 59%.
+										</dd>
+										<br>
+										<dt>Stacking</dt>
+										<dd>
+											The second type of skill expression, which I'll refer to as the stacking chance, is a percentage that shows how well a player stacks the two halves back together.
+											A player with an 80% stacking chance has a 20% chance of messing up and not stacking the current card from that hand.
+											As a result, the left hand may stack three cards in a row before the right hand stacks a single card.
+											The perfect player will always have a stacking chance of 100%.
+										</dd>
+									</dl>
+								</p>
+								<br><br>
+								<h3>Paramaters for the program</h3>
+								<p>
+									To test out a certain scenario you'd only have to fill in it's parameters to find the results. The way it is implemented also allows you to easily run many different scenario's in one go.
+									Each scenario needs the following paramaters to run:
+									<dl>
+										<dt>Filename</dt>
+										<dd>The name of the file in which the scenario's graph will be saved.</dd>
+										<br>
+										<dt>Amount of players</dt>
+										<dd>The amount of players for that scenario</dd>
+										<br>
+										<dt>Amount of shuffles</dt>
+										<dd>The amount of times each player shuffles their deck before finding it's score.</dd>
+										<br>
+										<dt>Amount of repeats</dt>
+										<dd>The number of times the scenario is performed to provide a more quantifiable outcome; the more repetitions, the fewer outliers in the final graph, and hence a more streamlined result.</dd>
+										<br>
+										<dt>Parting range minimum</dt>
+										<dd>The lowest possible percentage at which the worst player can split the deck. The remaining players will have steadily increasing minimums until it hits 50%, at which point we will have reached the perfect player.</dd>
+										<br>
+										<dt>Parting range maximum</dt>
+										<dd>The highest possible percentage at which the worst player can split the deck. The remaining players will have steadily decreasing maximums until it hits 50%, at which point we will have reached the perfect player.</dd>
+										<br>
+										<dt>Stacking chance</dt>
+										<dd>The percentage of how well the worst player stacks the cards. The remaining players will have steadily increasing percentages until it hits 100%, at which point we will have reached the perfect player.</dd>
+										<br>
+									  </dl>
+								</p>
+
+								
+								
+								<br>
+								<h2>The Results</h2>
+								
+								<h3>How much impact does the skill of the player have?</h3>
+								<p>
+									The difference in skill level between the best and worst players is depicted in this first graph, with player 0 having the highest skill level and player 100 having the lowest.
+									Player 100 has the widest possible parting range (0 to 100%) and the lowest stacking chance (1%).
+									<div class="image main"><img src="images/MainResults.png" alt=""/></div>
+									It's interesting to note that we've reached a sort of tipping point around player 50, after which a lower skill level seems to matter less and less as the graph progresses.
+									This can be inferred from the graph, which begins to flatten out around player 50.
+								</p>
+								
+								<br>
+								<h3>What if we shuffled more than once?</h3>
+								<p>
+									<div class="image main"><img src="images/MainResults2Shuffles.png" alt=""/></div>
+									The difference is that the tipping point now occurs sooner, around player 30, rather than later, around player 50, as it did when we merely shuffled once.
+									Another intriguing feature of this second graph is that the line of perfectly similar cards has dropped more the streak similar cards.
+								</p>
+
+								<br>
+								<h3>Which component of the skill matters more?</h3>
+								<p>
+									To determine which component of the player's skill has a greater impact, they will be examined independently.
+									<div class="image main"><img src="images/PartingResults.png" alt=""/></div>
+									The graph above depicts the scenario in which each player's only skill expression is how well he or she parts the deck. 
+									This is accomplished by giving all players a 100% stacking chance in order to eliminate any other form of skill expression and only test for the skill of parting.
+								</p>
+								<p>
+									<div class="image main"><img src="images/StackingResults.png" alt=""/></div>
+									The graph above depicts the scenario in which each player's only skill expression is how well he or she stacks the two halves back together.
+									This is accomplished by giving all players a 50% parting range in order to eliminate any other form of skill expression and only test for the skill of stacking.
+								</p>
+								<p>
+									The results of both graphs will be compared in the two graphs below to provide a clear side by side comparison.
+									<div class="image main"><img src="images/PerfectCompared.png" alt=""/></div>
+									<div class="image main"><img src="images/StreakCompared.png" alt=""/></div>
+									The answer to which of the two skill expressions has the greatest impact can be found with the graphs above.
+									The component with the greatest impact will have the lower line, because a lower line indicates that the decks grew more diverse as a result of that component of the skill.
+									Using this logic, I argue that the skill of parting has a greater impact on the perfectly similar cards, but the skill of stacking has a greater impact on streak similar cards.
+									As a result, I conclude that both components are equally important when performing this shuffle.
+								</p>
+
+
+
+							</section>
+							<section>
+								<ul class="actions fit small">
+									<li><a href="index.html" class="button primary fit">Back to projects</a></li>
+									<li><a href="https://github.com/M-J4K/CardShuffle" class="button fit">See code</a></li>
+								</ul>
+							</section>
+					</div>
+
+
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
