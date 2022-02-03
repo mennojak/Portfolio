@@ -1,4 +1,3 @@
-
 # Portfolio
 
 My personal portfolio which shows my abilities and projects. 
