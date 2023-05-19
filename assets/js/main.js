@@ -256,3 +256,8 @@
 		}
 
 })(jQuery);
+
+// For the collapsible description
+$('.btn').click(function() {
+	$(this).next().slideToggle(400);
+  });

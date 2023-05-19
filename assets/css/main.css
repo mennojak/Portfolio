@@ -3829,11 +3829,34 @@ input, select, textarea {
 				width: 50%;
 			}
 
+			/* Added */
+			#main > .posts > h1 {
+				width: 100%;
+			}
+
 			#main > .posts > * {
 				padding: 4rem;
 				width: 50%;
 			}
 
+			/* Added */
+			#main > .posts > .first {
+				border-color: #fff;
+			}
+
+			/* Added */
+			#main > .posts > .second {
+				border-color: #fff;
+			}
+
+			/* Added */
+			@media screen and (max-width: 736px) {
+				#main > .posts > .second {
+					border-color: #eeeeee;
+				}
+			}
+
+			
 			#main > .posts > article {
 				border-color: #eeeeee;
 				border-left-width: 2px;
@@ -4455,4 +4478,15 @@ input, select, textarea {
 
 		}
 	
-	/* Language buttons */
+
+		/* For the collapsible description */
+		.content {
+		display: none;
+		padding: 10px;
+		background: #EAEAEA;
+		border: 1px solid #DDD;
+		}
+
+		.content > ul {
+		text-align: left;
+		}
