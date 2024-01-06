@@ -97,9 +97,25 @@
 
 				<!-- Copyright -->
 				<div id="copyright">
-					<ul><li>Copyright © 2023 Menno Jak</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li><li>Credits: <a href="#">See all</a></li></ul>
+					<ul><li>Copyright © 2023 Menno Jak</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li><li>Credits: <a id="myBtn">See all</a></li></ul>
 				</div>
 
+
+				<!-- The Credit Modal -->
+				<div id="myModal" class="modal">
+					<!-- Modal content -->
+					<div class="modal-content">
+						<span class="close"> &times;</span>
+						<ul>
+							<li>
+								<b>Monsternamekast Picture:</b> Image from brabantsedelta-programmas.nl
+							</li>
+							<li>
+								<b>Artery Alert Picture:</b> Image by pch.vector on Freepik
+							</li>
+						</ul>
+					</div>
+				</div>
 			</div>
 
 		<!-- Scripts -->
@@ -110,5 +126,28 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+
+		<!-- Credit Modal Script -->
+		<script> 
+			var modal = document.getElementById("myModal");
+			
+			var btn = document.getElementById("myBtn");
+			
+			var span = document.getElementsByClassName("close")[0];
+			
+			btn.onclick = function() {
+			  modal.style.display = "block";
+			}
+			
+			span.onclick = function() {
+			  modal.style.display = "none";
+			}
+
+			window.onclick = function(event) {
+			  if (event.target == modal) {
+				modal.style.display = "none";
+			  }
+			}
+		</script>
 	</body>
 </html>
