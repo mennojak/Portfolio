@@ -2630,6 +2630,8 @@ input, select, textarea {
 
 			.image.fit img {
 				width: 100%;
+				height:300px;
+				object-fit:contain;
 			}
 
 		.image.main {
@@ -2650,6 +2652,10 @@ input, select, textarea {
 
 			.image.fit {
 				margin: 2rem 0;
+			}
+
+			.image.fit img {
+				height: 200px;
 			}
 
 			.image.main {
