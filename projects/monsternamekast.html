@@ -106,20 +106,14 @@
 					</dd>
 					<dt>Model architecture:</dt>
 					<dd>
-						During the theoretical exploration phase, various machine learning models were considered. The selected model involves a hybrid approach combining regression and clustering for optimal predictions.
-						The model architecture includes:
-						<ul>
-							<li>Clustering algorithm applied to rainfall data per square kilometer in the Riel area</li>
-							<li>Integration of clustering results as additional input features for the predictive model</li>
-							<li>Regression model to capture the relationships between rainfall and influent</li>
-						</ul>
+						During the theoretical exploration phase, various machine learning models were considered and. The selected model which showed the biggest promise was a multi-step linear regression model, which made use of lag features to deal with the time-series data. 
 					</dd>
 				</dl>
 
 				<h2>🎯 Results</h2>
 
 				<p>
-					The project achieved several milestones towards the final model, which accurately predicts the inflow to the central facility with an accuracy of ?%.
+					The project achieved several milestones towards the final model, which accurately predicts the inflow to the central facility with an R-squared of 86%.
 					<ul>
 						<li><b>Data Collection and Exploration:</b> 
 							The first milestone involved finalizing the time-intensive data collection and exploration phase, 
@@ -129,44 +123,46 @@
 							where various machine learning models were explored and tested to determine their applicability.</li>
 						<li><b>Final Predictive Model:</b> 
 							The last milestone involved creating the ultimate predictive model. 
-							Numerous configurations of feature engineering and hyperparameters were tested to develop the final model.</li>
+							Numerous configurations of feature engineering were tested to develop the final model.</li>
 					</ul>
 				</p>
 				<p>
-					Even in the worst-case scenario's,
-					the model consistently stays comfortably within the defined acceptable limits of 5L to 55L. 
-					Even when the model deviates from the correct inflow amount, 
-					it tends to be reasonably close, 
-					yielding results like 20 or 35 instead of the ideal 27.5L. 
-					This represents a noteworthy outcome, 
-					given that the allowable limits are 5L to 55L. 
-					Therefore, the model not only showcases high accuracy but also exhibits robust performance,
-					demonstrating its resilience in accurately predicting inflow even when deviations occur.
+					While the 86% R-squared for predicting inflow is notable, the true strength of the model becomes apparent when considering its application in configuring the water sampler.
+					Even when the sample rate deviates slightly, the predicted inflow consistently remains close and stays within the predefined acceptable limits of 5L to 55L.
+					This results in the model achieving a remarkable 100% accuracy in predicting inflow closely enough to always adhere to the water sampler's operational limits.
 				</p>
 
 				<div class="slideshow-container">
 
 					<div class="mySlides1 fade">
-						<div class="numbertext">1 / 3</div>
-						<img src="../assets/images/monsternamekast/brabantse-delta-logo.jpg" style="width:100%">
+						<div class="numbertext">1 / 4</div>
+						<img src="../assets/images/monsternamekast/monsternamekast.jpg" style="width:100%">
 						<p>
-							<b>Afbeelding 1:</b> "Monsternamekast" Water Sampler
+							<b>Image 1:</b> "Monsternamekast" Water Sampler.
 						</p>
 					</div>
 				
 					<div class="mySlides1 fade">
-						<div class="numbertext">2 / 3</div>
-						<img src="../assets/images/monsternamekast/brabantse-delta-logo.jpg" style="width:100%">
+						<div class="numbertext">2 / 4</div>
+						<img src="../assets/images/monsternamekast/Overzicht_data.png" style="width:100%">
 						<p>
-							<b>Afbeelding 2:</b> Mooie grafieken (misschien van shapefiles gebied riel)
+							<b>Image 2:</b> An image of the available data sources for this project.
 						</p>
 					</div>
 
 					<div class="mySlides1 fade">
-						<div class="numbertext">3 / 3</div>
-						<img src="../assets/images/monsternamekast/brabantse-delta-logo.jpg" style="width:100%">
+						<div class="numbertext">3 / 4</div>
+						<img src="../assets/images/monsternamekast/Shapefile_data_gebied_Riel.png" style="width:100%">
 						<p>
-							<b>Afbeelding 3:</b> Resultaten model met iets van predicties.
+							<b>Image 3:</b> An image of how we used shapefiles and geoJSON data to get rain data for the specific area of Riel.
+						</p>
+					</div>
+
+					<div class="mySlides1 fade">
+						<div class="numbertext">4 / 4</div>
+						<img src="../assets/images/monsternamekast/resultaat.png" style="width:100%">
+						<p>
+							<b>Image 4:</b> Results of our final model. The blue data points are where the model was trained, whilst the orange ones show the model being tested.
 						</p>
 					</div>
 				
@@ -174,20 +170,13 @@
 					<a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
 				</div>
 
-				<p>
-					To be filled in.
-				</p>
-
-				<p>
-					To be filled in.
-				</p>
-
-
 				<h2>💭 Reflection</h2>
 				<p>
-					To be filled in.	
+					Personally, I found immense satisfaction in working on this project, as it allowed me to engage in both theoretical exploration and hands-on development of a machine learning model with tangible real-world implications. 
+					A significant takeaway for me was the realization that in practical ML projects, a substantial portion—around 90%—is dedicated to data gathering and cleaning. 
+					The importance of quality data became evident, as without it, the model's performance is severely hindered. Additionally, this project reinforced the notion that simpler models often outperform more complex ones in real-world ML applications. 
+					Both our project and observations from other groups in the minor highlighted that straightforward models, such as linear regression and random forest, consistently yielded superior results despite their simplicity.
 				</p>
-				
 			</section>
 			<section>
 				<ul class="actions fit small">
@@ -197,11 +186,12 @@
 						</a>
 					</li>
 					<li>
-						<a href="#" class="button fit">See code</a>
+						<div class="popup button fit" onclick="myFunction()">See code
+							<span class="popuptext" id="myPopup">On request</span>
+						</div>
 					</li>
 				</ul>
 			</section>
-			
 		</div>
 		
 
