@@ -43,42 +43,80 @@
 				<div id="main">
 
 					<!-- Most recent project -->
-					<article class="post featured">
+					<!-- <article class="post featured">
 						<header class="major">
 							<span class="date">Nov 4, 2023</span>
 							<h2><a href="projects/artery-alert">Artery Alert</a></h2>
 							<p>Developed as part of the A.I. minor's "Human Centric A.I. Design" course, this project involved creating two ethically contrasting  machine learning applications, each predicting heart disease based on user-provided health information.</p>
 						</header>
-						<a href="projects/artery-alert" class="image main"><img src="assets/images/thumbnails/artery-alert.jpg" alt="Photo by National Cancer Institute on Unsplash"/></a>
+						<a href="projects/artery-alert" class="image main"><img src="assets/images/thumbnails/artery-alert.jpg" alt="Picture from freepik.com"/></a>
 						<ul class="actions special">
 							<li><a href="projects/artery-alert" class="button large">See Project</a></li>
 						</ul>
-					</article>
+					</article> -->
 
 
 					<!-- Other projects -->
-					<!-- <section class="posts">
+					<section class="posts">
 						<article>
 							<header>
-								<span class="date">Feb 13, 2022</span>
-								<h2><a href="projects/card-shuffle">Card shuffle</a></h2>
+								<span class="date">Jan 22, 2024</span>
+								<h2><a href="projects/monsternamekast">Monsternamekast</a></h2>
+								<a href="projects/monsternamekast" class="image fit"><img src="assets/images/thumbnails/brabantse-delta.jpg" alt="Image from brabantsedelta-programmas.nl"/></a>
+								<p>
+									Capstone project for A.I. minor in collaboration with <a href="https://www.brabantsedelta.nl/">Brabantse Delta</a> water authority. 
+									Our team devised a machine learning model predicting water inflow, 
+									crucial for optimizing the sampling frequency for the "monsternamekast" water samplers at treatment plants.
+								</p>
 							</header>
-							<a href="projects/card-shuffle" class="image fit"><img src="assets/images/thumbnails/cards.jpg" alt="Photo by Jack Hamilton on Unsplash" /></a>
-							<p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam<br />
-								facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br />
-								amet nullam sed etiam veroeros.</p>
-							<ul class="actions special">
-								<li><a href="#" class="button">See Project</a></li>
-							</ul>	
+							<ul class="actions special" style="align-items: end;">
+								<li><a href="projects/monsternamekast" class="button large">See Project</a></li>
+							</ul>
 						</article>
-					</section> -->
+						<article>
+							<header>
+								<span class="date">Nov 4, 2023</span>
+								<h2><a href="projects/artery-alert">Artery Alert</a></h2>
+								<a href="projects/artery-alert" class="image fit"><img src="assets/images/thumbnails/artery-alert.jpg" alt="Image by pch.vector on Freepik"/></a>
+								<p>
+									Developed as part of the A.I. minor's "Human Centric A.I. Design" course, 
+									this project involved creating two ethically contrasting  machine learning applications, 
+									each predicting heart disease based on user-provided health information.
+								</p>
+							</header>
+							<ul class="actions special">
+								<li><a href="projects/artery-alert" class="button large">See Project</a></li>
+							</ul>
+						</article>
+					</section>
+
+
+
+
 				</div>
 
 				<!-- Copyright -->
 				<div id="copyright">
-					<ul><li>Copyright © 2023 Menno Jak</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					<ul><li>Copyright © 2023 Menno Jak</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li><li>Credits: <a id="myBtn">See all</a></li></ul>
 				</div>
 
+
+				<!-- The Credit Modal -->
+				<div id="myModal" class="modal">
+					<!-- Modal content -->
+					<div class="modal-content">
+						<span class="close"> &times;</span>
+						<h2>Credits</h2>
+						<ul>
+							<li>
+								<b>Monsternamekast Picture:</b> Image from brabantsedelta-programmas.nl
+							</li>
+							<li>
+								<b>Artery Alert Picture:</b> Image by pch.vector on Freepik
+							</li>
+						</ul>
+					</div>
+				</div>
 			</div>
 
 		<!-- Scripts -->
@@ -89,5 +127,28 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+
+		<!-- Credit Modal Script -->
+		<script> 
+			var modal = document.getElementById("myModal");
+			
+			var btn = document.getElementById("myBtn");
+			
+			var span = document.getElementsByClassName("close")[0];
+			
+			btn.onclick = function() {
+			  modal.style.display = "block";
+			}
+			
+			span.onclick = function() {
+			  modal.style.display = "none";
+			}
+
+			window.onclick = function(event) {
+			  if (event.target == modal) {
+				modal.style.display = "none";
+			  }
+			}
+		</script>
 	</body>
 </html>

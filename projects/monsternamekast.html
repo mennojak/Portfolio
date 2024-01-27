@@ -1,0 +1,214 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Project: Monsternamekast</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="../assets/css/main.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<noscript>
+		<link rel="stylesheet" href="../assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<!-- <a href="../index" class="logo">Portfolio</a> -->
+		</header>
+
+		<!-- Nav -->
+		<nav id="nav">
+			<ul class="links">
+				<li><a href="../index">Projects</a></li>
+				<li><a href="../about-me">About me</a></li>
+			</ul>
+			<ul class="icons">
+				<li><a href="https://linkedin.com/in/menno-jak" class="icon brands fa-linkedin" target="_blank"><span class="label">Linkedin</span></a></li>
+				<li><a href="https://github.com/mennojak" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+				<li><a href="mailto:mennojak@gmail.com" class="icon fa-solid fa-envelope"><span class="label">Mail</span></a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- Post -->
+			<section class="post">
+				<header class="major">
+					<span class="date">Jan 22, 2024</span>
+					<h1>Monsternamekast</h1>
+					<p>
+						Capstone project for A.I. minor in collaboration with <a href="https://www.brabantsedelta.nl/">Brabantse Delta</a> water authority. 
+						Our team devised a machine learning model predicting water inflow, 
+						crucial for optimizing the sampling frequency for the "monsternamekast" water samplers at treatment plants.
+					</p>
+				</header>
+				
+				<div class="image main"><img src="../assets/images/monsternamekast/brabantse-delta-logo.jpg" alt="Logo waterschap Brabantse Delta" /></div>
+				
+				<p>
+					What exactly is a water sampler, and why does the sampling rate matter? 
+					A water sampler diligently collects water samples over a 24-hour period, allowing for subsequent analysis to assess water quality. 
+					The sampler takes a sample after every X cubic meter of water enters the treatment plant, a value set initially. 
+					A problem arises because the collected water must fall within the range of 5L to 55L to be accepted. 
+					Given the unpredictable nature of incoming water because of the big influence that rain has on this matter, 
+					predicting the inflow becomes necessary to set the sample rate accurately, 
+					ensuring each sample falls within the acceptable 5L to 55L range.
+				</p>
+
+				<h2>📌 Project specifications</h2>
+				<dl>
+
+					<dt>Goal:</dt>
+					<dd>
+						<p>
+							Develop a machine learning model to predict the amount of water flowing to a purification plant based on the weather forecast over a period of 24 hours.
+						</p>
+					</dd>
+					<dt>Scope:</dt>
+					<dd>
+						<p>The project focused exclusively on the Riel area as a proof of concept, chosen for its smaller water infrastructure and data availability.</p>
+					</dd>
+					<dt>Timeline:</dt>
+					<dd>
+						20 Weeks
+						<ul>
+							<li>13 Weeks part-time (since we still had other minor lessons within this period)</li>
+							<li>7 Weeks full-time </li>
+						</ul>
+					</dd>
+				</dl>
+
+				<h2>🖥️ Technical Specifications</h2>
+				<dl>
+					<dt>Technologies, tools and frameworks used:</dt>
+					<dd>
+						<ul>
+							<li>Jupyter Notebook</li>
+							<li>Shapefile extractor thingy</li>
+						</ul>
+					</dd>
+					<dt>Data:</dt>
+					<dd>
+						The created dataset used for this project includes the following key components, which include both recieved data from the Brabantse Delta and independantly collected data:
+						<ul>
+							<li>Weather forecast data (from WIWB)</li>
+							<li>Rainfall data for the specified Riel area (from KNMI)</li>
+							<li>Flow rate data from the pumps in the Riel area to the central facility</li>
+							<li>Influent data representing the water entering the central facility</li>
+						</ul>
+					</dd>
+					<dt>Model architecture:</dt>
+					<dd>
+						During the theoretical exploration phase, various machine learning models were considered and. The selected model which showed the biggest promise was a multi-step linear regression model, which made use of lag features to deal with the time-series data. 
+					</dd>
+				</dl>
+
+				<h2>🎯 Results</h2>
+
+				<p>
+					The project achieved several milestones towards the final model, which accurately predicts the inflow to the central facility with an R-squared of 86%.
+					<ul>
+						<li><b>Data Collection and Exploration:</b> 
+							The first milestone involved finalizing the time-intensive data collection and exploration phase, 
+							addressing challenges related to the scarcity and complexity of the data.</li>
+						<li><b>Model Selection:</b> 
+							The second milestone encompassed the theoretical and experimental phase, 
+							where various machine learning models were explored and tested to determine their applicability.</li>
+						<li><b>Final Predictive Model:</b> 
+							The last milestone involved creating the ultimate predictive model. 
+							Numerous configurations of feature engineering were tested to develop the final model.</li>
+					</ul>
+				</p>
+				<p>
+					While the 86% R-squared for predicting inflow is notable, the true strength of the model becomes apparent when considering its application in configuring the water sampler.
+					Even when the sample rate deviates slightly, the predicted inflow consistently remains close and stays within the predefined acceptable limits of 5L to 55L.
+					This results in the model achieving a remarkable 100% accuracy in predicting inflow closely enough to always adhere to the water sampler's operational limits.
+				</p>
+
+				<div class="slideshow-container">
+
+					<div class="mySlides1 fade">
+						<div class="numbertext">1 / 4</div>
+						<img src="../assets/images/monsternamekast/monsternamekast.jpg" style="width:100%">
+						<p>
+							<b>Image 1:</b> "Monsternamekast" Water Sampler.
+						</p>
+					</div>
+				
+					<div class="mySlides1 fade">
+						<div class="numbertext">2 / 4</div>
+						<img src="../assets/images/monsternamekast/Overzicht_data.png" style="width:100%">
+						<p>
+							<b>Image 2:</b> An image of the available data sources for this project.
+						</p>
+					</div>
+
+					<div class="mySlides1 fade">
+						<div class="numbertext">3 / 4</div>
+						<img src="../assets/images/monsternamekast/Shapefile_data_gebied_Riel.png" style="width:100%">
+						<p>
+							<b>Image 3:</b> An image of how we used shapefiles and geoJSON data to get rain data for the specific area of Riel.
+						</p>
+					</div>
+
+					<div class="mySlides1 fade">
+						<div class="numbertext">4 / 4</div>
+						<img src="../assets/images/monsternamekast/resultaat.png" style="width:100%">
+						<p>
+							<b>Image 4:</b> Results of our final model. The blue data points are where the model was trained, whilst the orange ones show the model being tested.
+						</p>
+					</div>
+				
+					<a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+				</div>
+
+				<h2>💭 Reflection</h2>
+				<p>
+					Personally, I found immense satisfaction in working on this project, as it allowed me to engage in both theoretical exploration and hands-on development of a machine learning model with tangible real-world implications. 
+					A significant takeaway for me was the realization that in practical ML projects, a substantial portion—around 90%—is dedicated to data gathering and cleaning. 
+					The importance of quality data became evident, as without it, the model's performance is severely hindered. Additionally, this project reinforced the notion that simpler models often outperform more complex ones in real-world ML applications. 
+					Both our project and observations from other groups in the minor highlighted that straightforward models, such as linear regression and random forest, consistently yielded superior results despite their simplicity.
+				</p>
+			</section>
+			<section>
+				<ul class="actions fit small">
+					<li>
+						<a href="../index" class="button primary fit">
+							<i class="fa fa-arrow-left"></i> Back to projects
+						</a>
+					</li>
+					<li>
+						<div class="popup button fit" onclick="myFunction()">See code
+							<span class="popuptext" id="myPopup">On request</span>
+						</div>
+					</li>
+				</ul>
+			</section>
+		</div>
+		
+
+		<!-- Copyright -->
+		<div id="copyright">
+			<ul><li>Copyright © 2023 Menno Jak</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+		</div>
+
+
+		<!-- Scripts -->
+		<script src="../assets/js/jquery.min.js"></script>
+		<script src="../assets/js/jquery.scrollex.min.js"></script>
+		<script src="../assets/js/jquery.scrolly.min.js"></script>
+		<script src="../assets/js/browser.min.js"></script>
+		<script src="../assets/js/breakpoints.min.js"></script>
+		<script src="../assets/js/util.js"></script>
+		<script src="../assets/js/main.js"></script>
+</body>
+
+</html>
