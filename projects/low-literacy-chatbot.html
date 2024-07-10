@@ -1,0 +1,214 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Project: Low Literacy Chatbot</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="../assets/css/main.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<noscript>
+		<link rel="stylesheet" href="../assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<!-- <a href="../index" class="logo">Portfolio</a> -->
+		</header>
+
+		<!-- Nav -->
+		<nav id="nav">
+			<ul class="links">
+				<li><a href="../index">Projects</a></li>
+				<li><a href="../about-me">About me</a></li>
+			</ul>
+			<ul class="icons">
+				<li><a href="https://linkedin.com/in/menno-jak" class="icon brands fa-linkedin" target="_blank"><span class="label">Linkedin</span></a></li>
+				<li><a href="https://github.com/mennojak" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+				<li><a href="mailto:mennojak@gmail.com" class="icon fa-solid fa-envelope"><span class="label">Mail</span></a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- Post -->
+			<section class="post">
+				<header class="major">
+					<span class="date">Jun 14, 2024</span>
+					<h1>Low Literacy Chatbot</h1>
+					<p>
+						My internship project at the <a href="https://www.asz.nl/">Albert Schweitzer</a> hospital in my 6th semester. 
+						Our team did research and made a prototype for a medical chatbot adjusted for low literacy, 
+						aimed at exploring a solution to the problem of treatment leaflets which are almost never read.    
+					</p>
+				</header>
+				
+				<div class="image main"><img src="../assets/images/chatbot/og-logo-asz.jpg" alt="Albert Schweitzer hospital logo" /></div>
+
+				<p>
+					Before or after a treatment a patient gets a leaflet in their online patient dossier, 
+					where important information about preperations or complications are written down. 
+					It's been found that only 2-5% of patients actually read these leaflets online. 
+					Logging in to your online patient dossier with DigID, navigating to the leaflet and then having to attentively read it was understandably too big of a hassle for many patients.
+					Another part of the project revolved around low literacy, 
+					because the area of Dordrecht (where the hospital is located) experiences a high percentage of this (around 20% of the population).
+					We we're tasked with researching if Large Language Models could be used to help these patients by offering a more approachable option to acces the information inside of the leaflets.   
+				</p>
+				<p>
+					My role within the team was the 'software developer', 
+					for which I held myself busy with doing research on the technical side of this project, 
+					programming a custom made chatbot and (with the help of another teammate) setting up and integrating the final prototype.
+				</p>
+				
+				<h2>📌 Project specifications</h2>
+				<dl>
+					<dt>Goal:</dt>
+					<dd>
+						<p>Research and prototype an alternative digital solution to provide public healthcare information from the Albert Schweitzer Hospital (ASz) in an accessible way for low-literate patients.</p>
+					</dd>
+					<dt>Scope:</dt>
+					<dd>
+						<ul>
+							<li>Instead of all the available public healthcare information from the hospital, we focussed on only the treatment leaflets, since there was evidence that those leaflets were almost never being read (as explained in the introduction) and it helped simplify the project</li>
+							<li>Privacy, Security and the whole legal side of these type of medical chatbots was outside of the scope, since the main focus was on researching if using AI for these purposes was even possible</li>
+						</ul>
+					</dd>
+					<dt>Timeline:</dt>
+					<dd>
+						<p>15 Weeks</p>
+					</dd>
+				</dl>
+
+				<h2>🖥️ Technical Specifications</h2>
+				<dl>
+					<dt>Technologies, tools and frameworks used (Custom chatbot):</dt>
+					<dd>
+						<ul>
+							<li>Python with the langchain Library</li>
+							<li>Chroma vector database</li>
+							<li>Open-source LLM and embeddingsmodel from Huggingface</li>
+						</ul>
+					</dd>
+					<dt>Technologies, tools and frameworks used (Final chatbot):</dt>
+					<dd>
+						<ul>
+							<li>Voiceflow</li>
+							<li>ManyChat</li>
+							<li>Whatsapp</li>
+						</ul>
+					</dd>
+					<dt>Data:</dt>
+					<dd>
+						<p>
+							The 2 medical leaflets used for testing the final prototype where one about a 
+							<a href="https://www.asz.nl/folders/arm_252/bovenarmbrace-bij-een-botbreuk-in-de-bovenarm.pdf">broken upper arm</a> 
+							and one about an 
+							<a href="https://www.asz.nl/folders/nastaar_831/laserbehandeling-bij-nastaar.pdf">after cataract laser operation</a> 
+							from the ASz website.
+						</p>
+					</dd>
+				</dl>
+
+				<h2>🎯 Results</h2>
+
+				<p>
+					The project was successful in achieving its primary goal of researching, prototyping, and testing a potential AI solution for low-literate patients. 
+					We completed a comprehensive research project covering various aspects of the problem, thanks to our collaborative efforts as a team.
+				</p>
+
+				<p>
+					My role focused on developing a custom chatbot, which, while not perfect, provided valuable insights. 
+					Testing this chatbot allowed us to draw conclusions that informed our technology recommendations for the final prototype, a Whatsapp chatbot powered by Voiceflow. 
+					This final prototype was successfully tested with Stichting ABC, an organization for and by low-literate individuals. 
+					Additionally, we presented it to the client panel and employees from different hospital sections, receiving positive feedback.
+				</p>
+
+				<div class="slideshow-container">
+
+					<div class="mySlides1 fade">
+						<div class="numbertext">1 / 3</div>
+						<img src="../assets/images/chatbot/custom_chatbot_test.png" style="width:100%">
+						<p>
+							<b>Image 1:</b> Testing the custom chatbot.
+						</p>
+					</div>
+				
+					<div class="mySlides1 fade">
+						<div class="numbertext">2 / 3</div>
+						<img src="../assets/images/chatbot/stichtingABC.jpg" style="width:100%">
+						<p>
+							<b>Image 2:</b> Testing a Voiceflow chatbot prototype with Stichting ABC.
+						</p>
+					</div>
+
+					<div class="mySlides1 fade">
+						<div class="numbertext">3 / 3</div>
+						<video src="../assets/images/chatbot/final_chatbot_test.mp4" style="max-height: 600px; width: 50%; margin-left: 25%;"></video>
+						<p>
+							<b>Video:</b> Testing the final Whatsapp chatbot prototype, which we showed in our final presentations.
+						</p>
+					</div>
+				
+					<a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+				</div>
+
+				<p>
+					Our project was not intended to implement a final product but to explore different solutions, prototype the most promising one, and test its feasibility. 
+					We succeeded in demonstrating that an AI solution could be effective, sparking interest and showing its potential to the hospital staff. 
+					Further research, testing, and development are necessary for any future rollout, but we laid a strong foundation for continued exploration.
+				</p>
+
+
+				<h2>💭 Reflection</h2>
+				<p>
+					Reflecting on the project, balancing school requirements with project tasks presented challenges, but overall, it was a fulfilling experience where I learned a lot. The initial misalignment between the project's goals and the practice supervisor's expectations required finding a balance between development work and research. This overlap often made it hard to demonstrate progress in both areas.
+				</p>
+				<p>
+					During the first two sprints, I focused on supporting the team to establish a clear direction. By the third sprint, I was able to develop and test the custom chatbot application effectively, even though it coincided with interim assessments. This period was intense but rewarding.
+				</p>
+				<p>	
+					Despite these challenges, the project was highly educational and meaningful. Working on an innovative solution for a vulnerable group was deeply satisfying. The support from my instructor, practice supervisor, and teammates was invaluable, allowing me to navigate the complexities and achieve successful outcomes.
+				</p>
+				
+			</section>
+			<section>
+				<ul class="actions fit small">
+					<li>
+						<a href="../index" class="button primary fit">
+							<i class="fa fa-arrow-left"></i> Back to projects
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/mennojak/ASz-Internship" class="button fit" target="_blank">See code</a>
+					</li>
+				</ul>
+			</section>
+			
+		</div>
+		
+
+		<!-- Copyright -->
+		<div id="copyright">
+			<ul><li>Copyright © 2023 Menno Jak</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+		</div>
+
+
+		<!-- Scripts -->
+		<script src="../assets/js/jquery.min.js"></script>
+		<script src="../assets/js/jquery.scrollex.min.js"></script>
+		<script src="../assets/js/jquery.scrolly.min.js"></script>
+		<script src="../assets/js/browser.min.js"></script>
+		<script src="../assets/js/breakpoints.min.js"></script>
+		<script src="../assets/js/util.js"></script>
+		<script src="../assets/js/main.js"></script>
+</body>
+
+</html>
