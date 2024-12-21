@@ -1,0 +1,213 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Project: E-certNL</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="../assets/css/main.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" type="image/png" href="favicon.png">
+	<noscript>
+		<link rel="stylesheet" href="../assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<!-- <a href="../index" class="logo">Portfolio</a> -->
+		</header>
+
+		<!-- Nav -->
+		<nav id="nav">
+			<ul class="links">
+				<li><a href="../index">Projects</a></li>
+				<li><a href="../about-me">About me</a></li>
+			</ul>
+			<ul class="icons">
+				<li><a href="https://linkedin.com/in/menno-jak" class="icon brands fa-linkedin" target="_blank"><span class="label">Linkedin</span></a></li>
+				<li><a href="https://github.com/mennojak" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+				<li><a href="mailto:mennojak@gmail.com" class="icon fa-solid fa-envelope"><span class="label">Mail</span></a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- Post -->
+			<section class="post">
+				<header class="major">
+					<span class="date">Jan 10, 2025</span>
+					<h1>e-CertNL</h1>
+					<p>
+						The goal was to develop a prototype web application to modernize and structure the export certification process,  
+						improving collaboration between the Expertise and Content Management teams and providing better task tracking. 
+					</p>
+				</header>
+				
+				<div class="image main"><img src="../assets/images/thumbnails/nvwa.svg" alt="SVG from nvwa.nl" /></div>
+				
+				<h2>📌 Project specifications</h2>
+				<dl>
+					<dt>Goal:</dt>
+					<dd>
+						<p>
+							To develop a prototype solution for improving the internal export certification process at the Dutch Food and Consumer Product Safety Authority (NVWA).
+						</p>
+					</dd>
+					<dt>Scope:</dt>
+					<dd>
+						<ul>
+							<li>
+								The prototype web application could be developed using any programming languages or tools, 
+								as long as it is hosted and accessible for employee testing.
+							</li>
+							<li>
+								The focus would not include addressing the issue of country import laws being saved and updated in Word documents, 
+								as this is being handled in a parallel project.
+							</li>
+							<li>
+								Research the feasibility of using AI to automate specific tasks within the workflow, 
+								with implementation considered only if time permits.
+							</li>
+						</ul>
+					</dd>
+					<dt>Timeline:</dt>
+					<dd>
+						<p>15 Weeks</p>
+					</dd>
+				</dl>
+
+				<h2>🖥️ Technical Specifications</h2>
+				<dl>
+					<dt>Technologies, tools and frameworks used:</dt>
+					<dd>
+						<ul>
+							<li>Django</li>
+							<li>Render</li>
+							<li>Github with Github Actions and Code Scanner</li>
+							<li>Vulnerability Scanners from <a href="https://pentest-tools.com/alltools#web-vulnerability-scanners" target="_blank">Pentest Tools</a></li>
+							<li>Selenium</li>
+							<li>Jupyter Notebook</li>
+						</ul>
+					</dd>
+
+				</dl>
+
+				<h2>🎯 Results</h2>
+
+				<p>
+					The research into AI evolved into exploring how NLP technologies could detect and summarize changes in documents. 
+					This involved conducting a trend and product analysis, followed by testing the most promising solution (LLMs) in a Jupyter Notebook. 
+					Models like ChatGPT demonstrated the best performance in these tests. 
+					However, due to time constraints, integrating AI or NLP into the final prototype was not feasible.
+				</p><p>
+					The final prototype was well-received during testing with the two teams. 
+					It was developed as a Kanban-style Django web application, 
+					featuring role-based access control to ensure employees could only access their assigned tasks. 
+					Additional features included automated functional testing, security testing and hosting on Render.					
+				</p>
+
+				<div class="slideshow-container">
+
+					<div class="mySlides1 fade">
+						<div class="numbertext">1 / 5</div>
+						<img src="../assets/images/e-certnl/kanban-home.png" style="width:100%">
+						<p>
+							<b>Image 1:</b> The homepage of the application, which houses the kanban board.
+						</p>
+					</div>
+				
+					<div class="mySlides1 fade">
+						<div class="numbertext">2 / 5</div>
+						<img src="../assets/images/e-certnl/kanban-detail.png" style="width:100%">
+						<p>
+							<b>Image 2:</b> The detail page of a task.
+						</p>
+					</div>
+
+					<div class="mySlides1 fade">
+						<div class="numbertext">3 / 5</div>
+						<img src="../assets/images/e-certnl/kanban-edit.png" style="width:100%">
+						<p>
+							<b>Image 3:</b> The add/edit page of a task.
+						</p>
+					</div>
+
+					<div class="mySlides1 fade">
+						<div class="numbertext">4 / 5</div>
+						<img src="../assets/images/e-certnl/kanban-archive.png" style="width:100%">
+						<p>
+							<b>Image 4:</b> The archive page, which houses all the archived tasks.
+						</p>
+					</div>
+
+					<div class="mySlides1 fade">
+						<div class="numbertext">5 / 5</div>
+						<img src="../assets/images/e-certnl/kanban-archive-detail.png" style="width:100%">
+						<p>
+							<b>Image 5:</b> The detail page of an archived task.
+						</p>
+					</div>
+				
+					<a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+				</div>
+
+
+				<h2>💭 Reflection</h2>
+				<p>
+					This project was an enlightening experience, 
+					offering insights into a sector and workflow I had never encountered before. 
+					I gained a deep understanding of the complexities of export certification and how structured collaboration can solve real-world problems.
+				</p>
+				<p>
+					While writing essays on topics like DevOps and testing wasn’t as exciting as programming, 
+					these tasks proved essential. They helped refine our approach, 
+					improved the application’s quality, 
+					and made the development process smoother and more efficient.
+				</p>
+				<p>
+					Developing the application itself was both enjoyable and rewarding. 
+					Seeing the positive reactions from the teams during the final presentation was a highlight, 
+					making all the effort and learning worthwhile.
+				</p>
+			</section>
+			<section>
+				<ul class="actions fit small">
+					<li>
+						<a href="../index" class="button primary fit">
+							<i class="fa fa-arrow-left"></i> Back to projects
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/mennojak/NVWA-Internship" class="button fit" target="_blank">See code</a>
+					</li>
+				</ul>
+			</section>
+			
+		</div>
+		
+
+		<!-- Copyright -->
+		<div id="copyright">
+			<ul><li>Menno Jak</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+		</div>
+
+
+		<!-- Scripts -->
+		<script src="../assets/js/jquery.min.js"></script>
+		<script src="../assets/js/jquery.scrollex.min.js"></script>
+		<script src="../assets/js/jquery.scrolly.min.js"></script>
+		<script src="../assets/js/browser.min.js"></script>
+		<script src="../assets/js/breakpoints.min.js"></script>
+		<script src="../assets/js/util.js"></script>
+		<script src="../assets/js/main.js"></script>
+</body>
+
+</html>
